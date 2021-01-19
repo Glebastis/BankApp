@@ -62,16 +62,25 @@
                                         <rect key="frame" x="0.0" y="0.0" width="343" height="38.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                         <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                                        <connections>
+                                            <action selector="textFieldEditingChanged:" destination="L5R-Qm-l5b" eventType="editingChanged" id="Q5V-N9-48V"/>
+                                        </connections>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Срок в месяцах" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BIT-fg-RkA">
                                         <rect key="frame" x="0.0" y="58.5" width="343" height="38.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                         <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                                        <connections>
+                                            <action selector="textFieldEditingChanged:" destination="L5R-Qm-l5b" eventType="editingChanged" id="nCJ-S3-91q"/>
+                                        </connections>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Годовая ставка" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="x2z-00-s0c">
                                         <rect key="frame" x="0.0" y="117" width="343" height="38.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                         <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                                        <connections>
+                                            <action selector="textFieldEditingChanged:" destination="L5R-Qm-l5b" eventType="editingChanged" id="lgh-L6-y4x"/>
+                                        </connections>
                                     </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ежемесячный платеж" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R46-vd-hJ5">
                                         <rect key="frame" x="0.0" y="175.5" width="343" height="37"/>
@@ -97,6 +106,11 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Loan" image="creditcard" catalog="system" id="Lhj-pr-Jos"/>
+                    <connections>
+                        <outlet property="nperTextField" destination="BIT-fg-RkA" id="anZ-U5-iOS"/>
+                        <outlet property="pvTextField" destination="O1J-O1-zyY" id="9c8-yl-yj2"/>
+                        <outlet property="rateTextField" destination="x2z-00-s0c" id="hN3-oa-P9l"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="b41-Xk-12x" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
