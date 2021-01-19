@@ -50,7 +50,7 @@
         <!--Loan-->
         <scene sceneID="dTR-7Y-SRD">
             <objects>
-                <viewController id="L5R-Qm-l5b" sceneMemberID="viewController">
+                <viewController id="L5R-Qm-l5b" customClass="ViewController" customModule="BankApp" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Koj-GC-faA">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
