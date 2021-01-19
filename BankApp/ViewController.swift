@@ -25,6 +25,11 @@ class ViewController: UIViewController {
     }
     
     //MARK: - Methods
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        super.touchesBegan(touches, with: event)
+        view.endEditing(true)
+    }
+    
     func updateAmountLabel() {
         
         let formatter = NumberFormatter()
@@ -35,8 +40,15 @@ class ViewController: UIViewController {
         amountLabel?.text = formatter.string(from: number)
     }
     
-    func updateMonthlyAmountLabel{
-        let nper = nperTextField?.text
+    func updateMonthlyAmountLabel(){
+        monthlyPaymentLabel?.text = nil
+        
+        guard let nper = Double(nperTextField?.text ?? "") else { return }
+        guard let pv = Double(pvTextField?.text ?? "") else { return }
+        guard let rate = Double(rateTextField?.text ?? "") else { return }
+        
+        let monthlyPayment = abs(ExcelFormulas.pmt(rate: rate / 100 / 12, nper: nper, pv: pv))
+        monthlyPaymentLabel?.text = "\(monthlyPayment)"
     }
     
     override func viewDidLoad() {
@@ -44,7 +56,7 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
         
         updateAmountLabel()
-        
+        updateMonthlyAmountLabel()
     }
     // MARK: - Actions
     @IBAction func textFieldEditingChanged(_ sender: UITextField) {
