@@ -88,7 +88,7 @@
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="31"/>
                                         <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Баланс" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SBc-F3-ykj">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="12345" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SBc-F3-ykj">
                                         <rect key="frame" x="0.0" y="232.5" width="343" height="37"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="31"/>
@@ -107,6 +107,7 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Loan" image="creditcard" catalog="system" id="Lhj-pr-Jos"/>
                     <connections>
+                        <outlet property="monthlyPaymentLabel" destination="SBc-F3-ykj" id="TYy-nA-LkS"/>
                         <outlet property="nperTextField" destination="BIT-fg-RkA" id="anZ-U5-iOS"/>
                         <outlet property="pvTextField" destination="O1J-O1-zyY" id="9c8-yl-yj2"/>
                         <outlet property="rateTextField" destination="x2z-00-s0c" id="hN3-oa-P9l"/>
@@ -122,6 +123,7 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="m37-OC-1NO" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="hse-t5-r9e">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>

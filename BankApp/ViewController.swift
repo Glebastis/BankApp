@@ -11,6 +11,7 @@ class ViewController: UIViewController {
 
     // MARK: -Outlets
     @IBOutlet weak var amountLabel: UILabel?
+    @IBOutlet weak var monthlyPaymentLabel: UILabel?
     @IBOutlet weak var nperTextField: UITextField?
     @IBOutlet weak var pvTextField: UITextField?
     @IBOutlet weak var rateTextField: UITextField?
@@ -34,6 +35,9 @@ class ViewController: UIViewController {
         amountLabel?.text = formatter.string(from: number)
     }
     
+    func updateMonthlyAmountLabel{
+        let nper = nperTextField?.text
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -42,9 +46,9 @@ class ViewController: UIViewController {
         updateAmountLabel()
         
     }
-    
+    // MARK: - Actions
     @IBAction func textFieldEditingChanged(_ sender: UITextField) {
-        
+        updateMonthlyAmountLabel()
     }
     
 
